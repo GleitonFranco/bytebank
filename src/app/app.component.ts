@@ -11,7 +11,10 @@ export class AppComponent {
   transferencias: any[];
 
   constructor(private service: TransferenciaService) {
-    this.transferencias = service.transferencias;
+    service.todas().subscribe(transferencias => {
+      console.table(transferencias);
+      this.transferencias = transferencias;
+    });
   }
 
   transferir(event: any) {
