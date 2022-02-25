@@ -9,6 +9,7 @@ import {CommonModule, registerLocaleData} from '@angular/common';
 
 import localePt from '@angular/common/locales/pt';
 import {HttpClientModule} from '@angular/common/http';
+import {AppRoutingModule} from './app-routing.module';
 
 registerLocaleData(localePt, 'pt')
 
@@ -22,7 +23,8 @@ registerLocaleData(localePt, 'pt')
     BrowserModule,
     CommonModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'pt'},
@@ -31,3 +33,5 @@ registerLocaleData(localePt, 'pt')
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+// https://github.com/alura-cursos/1952-angular/tree/aula-7
